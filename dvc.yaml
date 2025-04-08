@@ -9,3 +9,17 @@ stages:
       - data/pipeline.pkl
       - data/processed_train_data.csv
       - data/processed_test_data.csv
+    params: 
+      - features.chi2percentile
+      - features.train_path
+      - features.test_path
+
+  prepare_diamonds:
+    cmd: python src/preprocessing.py
+    deps:
+      - data/diamonds.csv
+      - src/preprocessing.py
+    outs:
+      - data/diamond_pipeline.pkl
+      - data/processed_diamond_train_data.csv
+      - data/processed_diamond_test_data.csv

@@ -1,0 +1,5 @@
+outs:
+- md5: 2eae7f24c6d330f6fa375690e03c6763
+  size: 2884436
+  hash: md5
+  path: diamonds.csv
